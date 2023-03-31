@@ -38,7 +38,7 @@ export default function Itens(props: Props) {
       (item) => testaBusca(item.title) && testaFiltro(item.category.id)
     );
     setLista(ordenar(novaLista));
-  });
+  }, [busca, filtro, ordenador, ordenar, testaFiltro, testaBusca]);
 
   return (
     <div className={styles.itens}>
