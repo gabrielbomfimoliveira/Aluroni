@@ -1,5 +1,7 @@
 # Projeto PDI REDBELT
 
+https://aluronipdiredbelt.netlify.app/
+
 No curso, foram abordados os conceitos fundamentais do React como Componentização, Props e State. Aprendi como dividir a aplicação em componentes reutilizáveis para deixar o código mais legível e manutenível. Além disso, entendi como passar informações de um componente para outro através do uso de Props.
 
 Também foram abordados os hooks useState e useEffect, que permitem gerenciar o estado de um componente e atualizar o mesmo de forma reativa, sem a necessidade de utilizar class components. Com a utilização desses hooks, podemos manipular as informações que são exibidas na tela, sem a necessidade de recarregar a página.
