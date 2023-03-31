@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Ordenador from "../Ordenador";
 import Item from "./Item";
 import cardapio from "./itens.json";
 import styles from "./Itens.module.scss";
@@ -39,7 +38,7 @@ export default function Itens(props: Props) {
       (item) => testaBusca(item.title) && testaFiltro(item.category.id)
     );
     setLista(ordenar(novaLista));
-  }, [busca, filtro, ordenador]);
+  });
 
   return (
     <div className={styles.itens}>
