@@ -1,3 +1,13 @@
+# Projeto PDI REDBELT
+
+No curso de React aprendi a criar um projeto do zero utilizando o Create React App, uma ferramenta que facilita a configuração inicial do ambiente de desenvolvimento. Aprendi a utilizar o normalize.css para resetar os estilos padrões dos navegadores, o que ajuda a garantir a consistência visual da aplicação entre diferentes dispositivos e plataformas.
+
+Outro conceito importante que aprendi foi a configuração de imports absolutos, que nos permite importar arquivos sem a necessidade de usar caminhos relativos complexos (como "../../../").
+
+Em relação ao CSS, aprendi a utilizar boas práticas, como criar variáveis, arquivos para estas variáveis e para breakpoints de media-queries. Também utilizei o pacote classnames para simplificar o uso do CSS Modules e para lidar com estilos condicionais.
+
+O SVGR foi outra ferramenta que aprendemos a utilizar, que nos permite importar imagens no formato SVG como componentes React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
