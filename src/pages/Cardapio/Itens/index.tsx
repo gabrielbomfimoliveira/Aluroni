@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Item from "./Item";
 import cardapio from "./itens.json";
 import styles from "./Itens.module.scss";
@@ -12,25 +12,33 @@ interface Props {
 export default function Itens(props: Props) {
   const [lista, setLista] = useState(cardapio);
   const { busca, filtro, ordenador } = props;
+  const testaBusca = useCallback(
+    (title: string) => {
+      const regex = new RegExp(busca, "i");
+      return regex.test(title);
+    },
+    [busca]
+  );
 
-  function testaBusca(title: string) {
-    const regex = new RegExp(busca, "i");
-    return regex.test(title);
-  }
+  const testaFiltro = useCallback(
+    (id: number) => {
+      if (filtro !== null) return filtro === id;
+      return true;
+    },
+    [filtro]
+  );
 
-  function testaFiltro(id: number) {
-    if (filtro !== null) return filtro === id;
-    return true;
-  }
-
-  function ordenar(novaLista: typeof cardapio) {
-    switch (ordenador) {
-      case "porcao":
-        return novaLista.sort((a, b) => (a.size > b.size ? 1 : -1));
-      default:
-        return novaLista;
-    }
-  }
+  const ordenar = useCallback(
+    (novaLista: typeof cardapio) => {
+      switch (ordenador) {
+        case "porcao":
+          return novaLista.sort((a, b) => (a.size > b.size ? 1 : -1));
+        default:
+          return novaLista;
+      }
+    },
+    [ordenador]
+  );
 
   /*Sempre que busca e filtro mudarem, o useEffect vai rodar*/
   useEffect(() => {
