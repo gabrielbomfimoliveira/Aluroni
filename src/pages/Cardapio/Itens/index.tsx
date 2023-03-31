@@ -28,6 +28,8 @@ export default function Itens(props: Props) {
     switch (ordenador) {
       case "porcao":
         return novaLista.sort((a, b) => (a.size > b.size ? 1 : -1));
+      default:
+        return novaLista;
     }
   }
 
